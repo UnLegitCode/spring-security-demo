@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+<h2>User Profile</h2>
+<p>ID: <span th:text="${user.id()}"></span></p>
+<p>Username: <span th:text="${user.username()}"></span></p>
+<p>Role: <span th:text="${user.role().name()}"></span></p>
+<p>Created at: <span th:text="${user.createdAt().toString()}"></span></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Please Register</title>
+</head>
+<body>
+<h1>Please Register</h1>
+<form th:action="@{/register}" method="post">
+    <div>
+        <label>
+            <span>Username: </span>
+            <input type="text" name="username" placeholder="Username" th:value="${form.username()}" />
+        </label>
+    </div>
+    <div>
+        <label>
+            <span>Password: </span>
+            <input type="password" name="password" placeholder="Password" th:value="${form.password()}" />
+        </label>
+    </div>
+    <div>
+        <label>
+            <span>Role: </span>
+            <select name="role" th:value="${form.role()}">
+                <option value="USER">User</option>
+                <option value="ADMIN">Admin</option>
+            </select>
+        </label>
+    </div>
+    <input type="submit" value="Register" />
+</form>
+</body>
+</html>
